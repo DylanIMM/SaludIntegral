@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Salud Integral - Médicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-view="medicos">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar-cell">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">SALUD INTEGRAL</div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">Dashboard</a></li><li><a href="pacientes.html">Pacientes</a></li><li><a href="clinicas.html">Clínicas</a></li><li class="active"><a href="medicos.html">Médicos</a></li><li><a href="telefonos.html">Teléfonos Médicos</a></li><li><a href="consultorios.html">Consultorios</a></li><li><a href="citas.html">Citas Médicas</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main Panel Content -->
+        <div class="main-cell">
+            <div class="app-header">
+                <div class="header-table">
+                    <div class="header-left">
+                        <h1>SISTEMA DE GESTIÓN CLÍNICA</h1>
+                    </div>
+                    <div class="header-right">
+                        <span class="badge-sede" id="current-sede-badge">Cargando sede...</span>
+                        <a href="bienvenida.html" class="btn-change-sede">Cambiar Sede</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-content">
+                <div class="view-title">Registro de Personal Médico</div>
+
+<div class="crud-container">
+    <div class="form-cell">
+        <div class="panel-card">
+            <div class="panel-title">Ficha del Médico</div>
+            <form id="crud-form">
+                <input type="hidden" id="id_medico">
+                <div class="form-group">
+                    <label>Cédula de Identidad</label>
+                    <input type="text" id="cedula" class="form-control" placeholder="Ej. 1755566622" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre del Profesional</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej. Dr. Luis Novoa" required>
+                </div>
+                <div class="form-group">
+                    <label>Especialidad Clínica</label>
+                    <input type="text" id="especialidad" class="form-control" placeholder="Ej. Dermatología" required>
+                </div>
+                <div class="form-group">
+                    <label>Horario de Atención</label>
+                    <input type="text" id="horario_atencion" class="form-control" placeholder="Ej. 08:00 - 16:00" required>
+                </div>
+                <div class="form-group">
+                    <label>Clínica de Asignación</label>
+                    <select id="id_clinica" class="form-control" required></select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-sm btn-secondary" onclick="clearForm()">Limpiar</button>
+                    <button type="submit" class="btn-sm btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="table-cell-panel">
+        <div class="panel-card">
+            <div class="panel-title">Especialistas Médicos Disponibles</div>
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cédula</th>
+                            <th>Nombre</th>
+                            <th>Especialidad</th>
+                            <th>Horario de Atención</th>
+                            <th>Clínica Base</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Salud Integral - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-view="dashboard">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar-cell">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">SALUD INTEGRAL</div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="dashboard.html">Dashboard</a></li><li><a href="pacientes.html">Pacientes</a></li><li><a href="clinicas.html">Clínicas</a></li><li><a href="medicos.html">Médicos</a></li><li><a href="telefonos.html">Teléfonos Médicos</a></li><li><a href="consultorios.html">Consultorios</a></li><li><a href="citas.html">Citas Médicas</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main Panel Content -->
+        <div class="main-cell">
+            <div class="app-header">
+                <div class="header-table">
+                    <div class="header-left">
+                        <h1>SISTEMA DE GESTIÓN CLÍNICA</h1>
+                    </div>
+                    <div class="header-right">
+                        <span class="badge-sede" id="current-sede-badge">Cargando sede...</span>
+                        <a href="bienvenida.html" class="btn-change-sede">Cambiar Sede</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-content">
+                <div class="view-title">Panel de Control General</div>
+
+<div class="stats-table">
+    <div class="stats-card">
+        <div class="label">Pacientes Registrados</div>
+        <div class="value" id="stat-pacientes">-</div>
+    </div>
+    <div class="stats-card">
+        <div class="label">Médicos Asignados</div>
+        <div class="value" id="stat-medicos">-</div>
+    </div>
+    <div class="stats-card">
+        <div class="label">Consultorios Activos</div>
+        <div class="value" id="stat-consultorios">-</div>
+    </div>
+    <div class="stats-card">
+        <div class="label">Citas Médicas Programadas</div>
+        <div class="value" id="stat-citas">-</div>
+    </div>
+</div>
+
+<div class="panel-card">
+    <div class="panel-title">Monitoreo de Citas Médicas Inmediatas</div>
+    <div class="table-responsive">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Fecha y Hora</th>
+                    <th>Paciente</th>
+                    <th>Médico Especialista</th>
+                    <th>Ubicación</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody id="recent-citas-tbody">
+                <!-- Dynamically loaded -->
+            </tbody>
+        </table>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

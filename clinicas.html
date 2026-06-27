@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Salud Integral - Clínicas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-view="clinicas">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar-cell">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">SALUD INTEGRAL</div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">Dashboard</a></li><li><a href="pacientes.html">Pacientes</a></li><li class="active"><a href="clinicas.html">Clínicas</a></li><li><a href="medicos.html">Médicos</a></li><li><a href="telefonos.html">Teléfonos Médicos</a></li><li><a href="consultorios.html">Consultorios</a></li><li><a href="citas.html">Citas Médicas</a></li>
+            </ul>
+        </div>
+        
+        <!-- Main Panel Content -->
+        <div class="main-cell">
+            <div class="app-header">
+                <div class="header-table">
+                    <div class="header-left">
+                        <h1>SISTEMA DE GESTIÓN CLÍNICA</h1>
+                    </div>
+                    <div class="header-right">
+                        <span class="badge-sede" id="current-sede-badge">Cargando sede...</span>
+                        <a href="bienvenida.html" class="btn-change-sede">Cambiar Sede</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="app-content">
+                <div class="view-title">Administración de Clínicas</div>
+
+<div class="crud-container">
+    <div class="form-cell">
+        <div class="panel-card">
+            <div class="panel-title">Clínica</div>
+            <form id="crud-form">
+                <div class="form-group">
+                    <label>Código de Clínica</label>
+                    <input type="text" id="id_clinica" class="form-control" placeholder="Ej. C03" required>
+                </div>
+                <div class="form-group">
+                    <label>Nombre Institucional</label>
+                    <input type="text" id="nombre" class="form-control" placeholder="Ej. Salud Integral Sur" required>
+                </div>
+                <div class="form-group">
+                    <label>Dirección Física</label>
+                    <input type="text" id="direccion" class="form-control" placeholder="Ej. Av. Maldonado y El Tablón" required>
+                </div>
+                <div class="form-group">
+                    <label>Línea Telefónica</label>
+                    <input type="text" id="telefono" class="form-control" placeholder="Ej. 022777888" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-sm btn-secondary" onclick="clearForm()">Limpiar</button>
+                    <button type="submit" class="btn-sm btn-success">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="table-cell-panel">
+        <div class="panel-card">
+            <div class="table-responsive">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nombre de Clínica</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
